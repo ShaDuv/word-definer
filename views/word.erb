@@ -1,15 +1,16 @@
 <h1><%= @word.word %></h1>
-<h2><%= @word.definition %></h2>
 
 <form action="/word/<%= @word.id %>" method="post">
   <div class="form-group">
     <label for="message_header">Add Your Definition</label>
     <br>
-    <textarea id="kdef" name="kdef" class="form-control" type="text" rows="5" cols="60">
+    <textarea id="kdef" name="kdef" class="form-control" type="text" rows="3" cols="60">
     </textarea>
   </div>
-  <button type="submit" class="btn">Add definition!</button>
+  <button type="submit" class="btn btn-success">Add definition!</button>
 </form>
+
+<h2>Check out these definitions.</h2>
 
 <% if @word.kdefs.any? %>
    <ul>

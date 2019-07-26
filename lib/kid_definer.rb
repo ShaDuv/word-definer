@@ -39,10 +39,10 @@ class Kid_def
     Kid_def.find_by_word(self.id)
   end
 
-  def update(name, word_id)
-      self.name = name
+  def update(definition, word_id)
+      self.definition = definition
       self.word_id = word_id
-      @@kdef[self.id] = Song.new(self.name, self.word_id, self.id)
+      @@kdef[self.id] = Kid_def.new({:definition => self.definition, :word_id => self.word_id, :id => self.id})
     end
 
     def delete
