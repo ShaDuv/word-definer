@@ -20,6 +20,18 @@ get ('/word/:id') do
   @kdef = Kid_def.find_by_word(:id)
   erb(:word)
 end
+get ('/word/:word_id/definition/:kdef_id') do
+  @word = Word.find(params[:word_id].to_i())
+  @kdef = Kid_def.find(params[:kdef_id].to_i())
+  erb(:def_edit)
+end
+
+patch ('/word/:word_id/definition/:kdef_id') do
+  @word = Word.find(params[:word_id].to_i())
+  @kdef = Kid_def.find(params[:kdef_id].to_i())
+  @kdef.update(params[:definition], @word.id)
+  erb(:word)
+end
 
 post ('/new_word') do
   word = params[:word]
@@ -31,7 +43,7 @@ end
 
 post ('/word/:id') do
   @word = Word.find(params[:id].to_i())
-  kdef = Kid_def.new({:definition => params['kdef'], :word_id => @word.id})
-  kdef.save()
+  @kdef = Kid_def.new({:definition => params['kdef'], :word_id => @word.id})
+  @kdef.save()
   erb(:word)
 end

@@ -17,11 +17,13 @@ class Kid_def
   def self.find_by_word(word_id)
     definitions = []
     @@kdef.values.each do |definition|
-      if definition.word_id == word_id
-        definition.push(definition)
-      end
+      definitions.push(definition) if definition.word_id == word_id
     end
     definitions
+  end
+
+  def self.find(id)
+    @@kdef[id]
   end
 
   def save

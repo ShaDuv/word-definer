@@ -11,13 +11,12 @@
   <button type="submit" class="btn">Add definition!</button>
 </form>
 
-<% if @board.messages.any? %>
-<ul>
-  <% @board.messages.each do |message| %>
-    <li><a href="/message/<%= message.id %>"><%= message.header %>
-    </a><%= message.timestamp %></li>
-<% end %>
-  </ul>
-<% else %>
-  <p>It's lonely in here. Be the first to post a message.</p>
-<% end %>
+<% if @word.kdefs.any? %>
+   <ul>
+     <% @word.kdefs.each do |definitions| %>
+     <li><%= definitions.definition %> <a href="/word/<%= @word.id %>/definition/<%= definitions.id %>"> Edit</a><a href="/definition/<%= @word.id %>/definitions/<%= definitions.id %>"> Delete</a></li>
+     <% end %>
+   </ul>
+ <% else %>
+   <p>Nope, nada.</p>
+ <% end %>
