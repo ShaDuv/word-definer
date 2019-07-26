@@ -10,3 +10,14 @@
   </div>
   <button type="submit" class="btn">Add definition!</button>
 </form>
+
+<% if @board.messages.any? %>
+<ul>
+  <% @board.messages.each do |message| %>
+    <li><a href="/message/<%= message.id %>"><%= message.header %>
+    </a><%= message.timestamp %></li>
+<% end %>
+  </ul>
+<% else %>
+  <p>It's lonely in here. Be the first to post a message.</p>
+<% end %>
