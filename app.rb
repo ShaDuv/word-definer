@@ -1,8 +1,9 @@
 require('sinatra')
 require('sinatra/reloader')
-require_relative('./lib/word_definer')
-require_relative('./lib/kid_definer')
+require 'require_all'
 
+# load all ruby files in the directory "lib" and its subdirectories
+require_all 'lib'
 also_reload('lib/**/*.rb')
 
 get ('/') do
