@@ -5,8 +5,8 @@ class Word
   @@total_rows = 0
 
   def initialize(attributes)
-    @word = attributes.fetch(:word).capitalize
-    @definition = attributes.fetch(:definition).capitalize
+    @word = attributes.fetch(:word).capitalize.strip
+    @definition = attributes.fetch(:definition).capitalize.strip
     @id = id || @@total_rows += 1
   end
 
@@ -20,5 +20,9 @@ class Word
 
   def self.find(id)
     @@dictionary[id]
+  end
+
+  def kdefs
+    Kid_def.find_by_word(self.id)
   end
 end

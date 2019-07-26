@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 require('./lib/word_definer')
+require('./lib/kid_definer')
 require('pry')
 also_reload('lib/**/*.rb')
 
@@ -14,9 +15,9 @@ get ('/new_word') do
 end
 
 get ('/word/:id') do
-  # @kid_def = Kid_Def.all
+  @kid_def = Kid_def.all
   @word = Word.find(params[:id].to_i)
-  # @kdeffinitions = Kid_def.find_by_word(:id)
+  @kdef = Kid_def.find_by_word(:id)
   erb(:word)
 end
 
@@ -26,4 +27,11 @@ post ('/new_word') do
   new_word = Word.new({:word => word, :definition => definition})
   new_word.save()
   redirect to ('/')
+end
+
+post ('/word/:id') do
+  @word = Word.find(params[:id].to_i())
+  kdef = Kid_def.new({:definition => params['kdef'], :word_id => @word.id})
+  kdef.save()
+  erb(:word)
 end
