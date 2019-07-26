@@ -1,3 +1,4 @@
+require('./kid_definer')
 class Word
   attr_accessor :word, :definition, :id
 

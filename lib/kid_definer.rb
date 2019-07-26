@@ -1,4 +1,4 @@
-require('./lib/word_definer')
+require('./word_definer')
 
 class Kid_def
   attr_reader :id
