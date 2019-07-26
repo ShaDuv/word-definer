@@ -1,12 +1,12 @@
 class Word
-  attr_accessor :word, :deff, :id
+  attr_accessor :word, :definition, :id
 
   @@dictionary = {}
   @@total_rows = 0
 
   def initialize(attributes)
     @word = attributes.fetch(:word).capitalize
-    @definition = attributes.fetch(:deff).capitalize
+    @definition = attributes.fetch(:definition).capitalize
     @id = id || @@total_rows += 1
   end
 
