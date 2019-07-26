@@ -1,4 +1,3 @@
-require('./kid_definer.rb')
 class Word
   attr_accessor :word, :definition, :id
 

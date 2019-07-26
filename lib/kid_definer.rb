@@ -1,5 +1,3 @@
-require('./word_definer')
-
 class Kid_def
   attr_reader :id
   attr_accessor :name, :definition, :word_id
