@@ -15,7 +15,7 @@
 <% if @word.kdefs.any? %>
    <ul>
      <% @word.kdefs.each do |definitions| %>
-     <li><%= definitions.definition %> <a href="/word/<%= @word.id %>/definition/<%= definitions.id %>"> Edit</a><a href="/definition/<%= @word.id %>/definitions/<%= definitions.id %>"> Delete</a></li>
+     <li><%= definitions.definition %> <a href="/word/<%= @word.id %>/definition/<%= definitions.id %>"> Edit/Delete</a></li>
      <% end %>
    </ul>
  <% else %>

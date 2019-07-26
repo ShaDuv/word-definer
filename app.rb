@@ -47,3 +47,9 @@ post ('/word/:id') do
   @kdef.save()
   erb(:word)
 end
+
+delete ('/word/:word_id/definition/:kdef_id') do
+  @kdef = Kid_def.find(params[:kdef_id].to_i())
+  @kdef.delete
+  redirect to ("/word/#{params[:word_id]}")
+end
