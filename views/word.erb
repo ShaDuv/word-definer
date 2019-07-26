@@ -1,0 +1,12 @@
+<h1><%= @word.word %></h1>
+<h2><%= @word.definition %></h2>
+
+<form action="/word/<%= @word.id %>" method="post">
+  <div class="form-group">
+    <label for="message_header">Before reading the definition, what did you think the word meant?</label>
+    <br>
+    <textarea id="kid_def" name="kid_derf" class="form-control" type="text" rows="5" cols="60">
+    </textarea>
+  </div>
+  <button type="submit" class="btn">Add message!</button>
+</form>
