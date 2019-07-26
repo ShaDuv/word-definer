@@ -1,0 +1,5 @@
+require 'pry'
+require 'sinatra'
+require 'sinatra/reloader'
+require './lib/contact'
+also_reload 'lib/**/*.rb'
