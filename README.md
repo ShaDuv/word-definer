@@ -1,31 +1,21 @@
 # _Anagrams and Antigrams_
 
-#### _A Ruby Program that will determine if two strings are anagrams or antigrams. This repo is currently located at https://github.com/ShaDuv/anagrams_and_atigrams. _
+#### _Will allow users to input words, store them, add definitions, and edit and delete definitions as desired.. This repo is currently located at https://github.com/ShaDuv/anagrams_and_atigrams and can be viewd woth Heroku at https://stark-citadel-18127.herokuapp.com/. _
 
 #### By _**Shawna Duvall**_
 
 ## Description
 
-This is a Ruby based program that takes a string from the user and:
+This is a Ruby based program that allows users to input words and definitions.
 
-1. Accounts for the possibility that words might have different cases by changing all letters to lowercase.
+1. Accepts a word from the user and stores it.
 
-2. Checks if the inputs are words by checking the word contains at least one vowel. If one of the inputs has no vowels, the app returns: "You need to input actual words!"
+2. Accepts a definition from the user and stores it.
 
-3. Accounts for multiple words. Spaces and punctuation do not count, so they are removed
+3. Allows multiple definitions.
 
-4. Determines if two words are anagrams. If they are, the app returns: "These words are anagrams."
+4. Allows users to delete or edit their definition.
 
-6. If phrases aren't anagrams, the program checks whether they are antigrams and returns: ""That is an antigram"
-
-## Specs
-| Behavior |  Input   |  Output  |
-|----------|:--------:|:--------:|
-|Takes a word and stores it as well as displays it in a list below. | "Word" | "Word" |
-|The program takes the two strings and determines if each word (words are separated by a space) contains a vowel.  If not, program returns "You need to input actual words!"| "bc", "de" | "You need to input actual words!" |
-|The program takes the two strings and removes all spaces and punctuation (everything that is not a lower case letter).| "a b", "d.e" | input_one = "ab", input_two = "de" |
-|The program takes the two strings and checks if for every letter in input_one, there is a corresponding letter in input_two and no extra letters in input_two.  If so, the program returns: "These words are anagrams."| "listen", "silent" | "These words are anagrams." |
-|If the words are NOT anagrams, the program takes the two strings and checks if they are antigrams (if no letters match).  If so, the program returns: "These words have no letter matches and are antigrams."| "tall", "cube" |  "That is an antigram" |
 
 
 ## Setup/Installation Requirements
@@ -43,8 +33,8 @@ _N/A_
 _Update/make suggestions/refactor this code as you like. Please contact Shawna Duvall at shawnabduvall@gmail.com with questions._
 
 ## Technologies Used
-_Ruby, rspec Gem, BDD_
+_Ruby, rspec Gem, Heroku, Capybara,BDD_
 
 ### License
 *This software is licensed under the MIT license*
-Copyright (c) 2017 **Shawna Duvall**
+Copyright (c) 2019 **Shawna Duvall**
