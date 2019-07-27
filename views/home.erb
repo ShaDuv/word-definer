@@ -1,8 +1,7 @@
 <h1>Word Definer</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-<h2>Let's learn a new word!</h2>
-SEARCH BOX WILL GO HERE
+<h2><a href="/new_word">Add a New Word</a></h2>
 
 <h3>Full Word List</h3>
 <h5>Here is a list of all availible words. Can you guess what they mean? Click on one to see the definition. Once you have seen the definition you will be able to add what you thought it meant as well.</h5>
@@ -12,11 +11,9 @@ SEARCH BOX WILL GO HERE
 <% if @words.any? %>
   <ul>
     <% @words.each do |word| %>
-      <li><a href="/word/<%= word.id %>"><%= word.word %></a></li>
+      <li id= "<%= word.word %>"> <a href="/word/<%= word.id %>"><%= word.word %></a></li>
   <% end %>
   </ul>
 <% else %>
   <p>No words yet. Enter one to get theings started.</p>
 <% end %>
-
-<a href="/new_word">Add a New Word</a>
