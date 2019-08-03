@@ -1,6 +1,6 @@
 # _Anagrams and Antigrams_
 
-#### _Will allow users to input words, store them, add definitions, and edit and delete definitions as desired.. This repo is currently located at https://github.com/ShaDuv/anagrams_and_atigrams and can be viewd woth Heroku at https://stark-citadel-18127.herokuapp.com/. _
+#### _Will allow users to input words, store them, add definitions, and edit and delete definitions as desired.. This repo is currently located at https://github.com/ShaDuv/anagrams_and_atigrams and can be viewd woth Heroku at https://stark-citadel-18127.herokuapp.com/._
 
 #### By _**Shawna Duvall**_
 
